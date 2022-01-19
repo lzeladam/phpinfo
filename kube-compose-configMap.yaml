@@ -23,4 +23,11 @@ spec:
   volumes:
     -
       configMap:
-      name:
+        defaultMode: 0400
+        items:
+          -
+           key: index.php
+           mode: 0400
+           path: index.php
+        name: phpinfo
+      name: phpinfo-volume
